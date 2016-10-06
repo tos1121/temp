@@ -1,0 +1,9 @@
+// Simple_PAC
+function FindProxyForURL(url, host){
+	if (shExpMatch(host, "*.rakuten.co.jp")){
+		return "PROXY stg-proxy.intra-tool.rakuten.co.jp:9502";	
+	} else {
+		//rakuten.co.jp以外は直接接続する
+		return "DIRECT";
+	}
+}
